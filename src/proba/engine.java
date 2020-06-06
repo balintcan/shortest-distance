@@ -52,13 +52,18 @@ public class engine {
     private String mapSize;
     private String nodeNull;
     
-    private Map<String, Node> nodeMap = new HashMap<>();
-    private Map<String, Line> lineStyle = new HashMap<>();   
-    private Map<String, Node> visitedNodes = new HashMap<>();
-    private Map<String, Results> resultsMap = new HashMap<>();
+    private Map<String, Node> nodeMap = new HashMap<String, Node>();
+    private Map<String, Line> lineStyle = new HashMap<String, Line>();   
+    private Map<String, Node> visitedNodes = new HashMap<String, Node>();
+    private Map<String, Results> resultsMap = new HashMap<String, Results>();
     
-    private List<String> route = new ArrayList<>();
-    private List<String> routeInOrder = new ArrayList<>();
+    //private Map<String, Node> nodeMap = new HashMap<>();
+    //private Map<String, Line> lineStyle = new HashMap<>();   
+    //private Map<String, Node> visitedNodes = new HashMap<>();
+    //private Map<String, Results> resultsMap = new HashMap<>();
+    
+    private List<String> route = new ArrayList<String>();
+    private List<String> routeInOrder = new ArrayList<String>();
     private List<Node> nodeList;
     private List<Line> lineList;
     private List<Results> resultsList;
