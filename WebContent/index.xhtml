@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:svg="http://www.w3.org/2000/svg">
+
+        <h:head>
+        <title>Shortest distance</title>
+        <!-- <h:outputStylesheet library="css" name="style.css" /> -->
+    </h:head>
+    <h:body>
+        
+   
+        <h:form>
+            <h:outputText value="Traveling from :"/>
+            <h:inputText value="#{engine.startingNodeName}" />
+            <h:outputText value=" Arriving at: "/>
+            <h:inputText value="#{engine.destinationNodeName}"/>
+            <h:commandButton value="Plan my route" action="#{engine.planRoute()}" /><br/><br/>
+            <h:outputText value="The shortest route is as follows: #{engine.resultText}. The distance is #{engine.totalDistance} kilometres." />
+            <br/>
+            <h:outputText value="ennyi node van benne: #{engine.mapSize}"/>
+            <h:outputText value="starting : #{engine.startingNodeName}"/>
+        </h:form>
+       
+       
+        <br/>
+        
+        
+        
+      
+<svg width="600" height="600" style="float: right;margin-right: 60px;">
+    
+    <line x1="20" y1="30" x2="50" y2="180"  id="EdinLon" style="#{engine.edinburghLondon.styl}"/>
+    <line x1="20" y1="30" x2="260" y2="7" style="#{engine.edinburghOslo.styl}" id="EdinOslo"/>
+    <line x1="20" y1="30" x2="270" y2="180" style="#{engine.edinburghBerlin.styl}" id="EdinBer"/>
+    <line x1="20" y1="30" x2="360" y2="195" style="#{engine.edinburghWarsaw.styl}" id="EdinWar"/>
+    
+    
+    <line x1="260" y1="7" x2="80" y2="280" style="#{engine.osloParis.styl}" id="OsloPar"/>
+    <line x1="260" y1="7" x2="270" y2="180" style="#{engine.osloBerlin.styl}" id="OsloBer"/>
+    <line x1="260" y1="7" x2="360" y2="195" style="#{engine.osloWarsaw.styl}" id="OsloWar"/>
+    
+   
+    <line x1="50" y1="180" x2="270" y2="180" style="#{engine.londonBerlin.styl}" id="LonBer"/>
+    <line x1="50" y1="180" x2="250" y2="540" style="#{engine.londonRome.styl}" id="LonRome"/>
+    <line x1="50" y1="180" x2="80" y2="280" style="#{engine.londonParis.styl}" id="LonPar"/>
+    
+    <line x1="80" y1="280" x2="270" y2="180" style="#{engine.parisBerlin.styl}" id="ParBer"/>
+    <line x1="80" y1="280" x2="290" y2="310" style="#{engine.parisVienna.styl}" id="ParVie"/>
+    <line x1="80" y1="280" x2="250" y2="540" style="#{engine.parisRome.styl}" id="ParRome"/>
+    
+    <line x1="290" y1="310" x2="330" y2="320" style="#{engine.viennaBudapest.styl}" id="VieBud"/>
+    <line x1="290" y1="310" x2="250" y2="540" style="#{engine.viennaRome.styl}" id="VieRome"/>
+    <line x1="290" y1="310" x2="270" y2="180" style="#{engine.viennaBerlin.styl}" id="VieBer"/>
+     
+    <line x1="330" y1="320" x2="270" y2="180" style="#{engine.budapestBerlin.styl}" id="BudBer"/>
+    <line x1="330" y1="320" x2="250" y2="540" style="#{engine.budapestRome.styl}" id="BudRome"/>
+    <line x1="330" y1="320" x2="360" y2="195" style="#{engine.budapestWarsaw.styl}" id="BudWar"/>
+     
+    <line x1="360" y1="195" x2="270" y2="180" style="#{engine.warsawBerlin.styl}" id="WarBer"/>
+    
+    <text x="0" y="15" fill="black">Edinburgh</text>   
+    <text x="0" y="200" fill="black">London</text>
+    <text x="35" y="285" fill="black">Paris</text>
+    <text x="270" y="15" fill="black">Oslo</text>
+    <text x="370" y="200" fill="black">Warsaw</text>
+    <text x="230" y="215" fill="black">Berlin</text>
+    <text x="340" y="330" fill="black">Budapest</text>
+     <text x="226" y="326" fill="black">Vienna</text>
+      <text x="260" y="545" fill="black">Rome</text>
+    <circle cx="20" cy="30" r="5" stroke="green" stroke-width="2" fill="green" id="Edinburgh"/>
+  <circle cx="50" cy="180" r="5" stroke="green" stroke-width="2" fill="green" id="London"/>
+  <circle cx="80" cy="280" r="5" stroke="green" stroke-width="2" fill="green" id="Paris"/>
+  <circle cx="270" cy="180" r="5" stroke="green" stroke-width="2" fill="green" id="Berlin"/>
+  <circle cx="360" cy="195" r="5" stroke="green" stroke-width="2" fill="green" id="Warsaw"/>
+  <circle cx="290" cy="310" r="5" stroke="green" stroke-width="2" fill="green" id="Vienna"/>
+  <circle cx="330" cy="320" r="5" stroke="green" stroke-width="2" fill="green" id="Budapest"/>
+  <circle cx="260" cy="7" r="5" stroke="green" stroke-width="2" fill="green" id="Oslo"/>
+  <circle cx="250" cy="540" r="5" stroke="green" stroke-width="2" fill="green" id="Rome"/>
+</svg>
+      
+       
+        
+    </h:body>
+</html>
+
