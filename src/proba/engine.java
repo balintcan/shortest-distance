@@ -5,9 +5,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
-import javax.faces.bean.RequestScoped;
+//import javax.faces.bean.ManagedBean;
+//import javax.faces.bean.SessionScoped;
+//import javax.faces.bean.RequestScoped;
 //import org.hibernate.Session;
 import pojos.Line;
 import pojos.Node;
@@ -18,8 +18,8 @@ import pojos.Results;
  *
  * @author Balint Toth <www.deeno.co.uk>
  */
-@ManagedBean
-@RequestScoped
+//@ManagedBean
+//@RequestScoped
 public class engine {
     
    
